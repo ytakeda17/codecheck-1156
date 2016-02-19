@@ -94,14 +94,18 @@ app.delete('/api/projects/:id', function (req, res, next) {
 });
 
 
+app.listen(port, function () {
+    console.log("Server running with port", port)
+});
+
+/*
 var sqls = require('fs')
   .readFileSync(__dirname + '/specifications/database.sql')
   .toString();
-
-
 knex.raw(sqls)
   .then(function () {
     app.listen(port, function () {
       console.log("Server running with port", port)
     });
   });
+*/
